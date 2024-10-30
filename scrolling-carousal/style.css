@@ -1,0 +1,73 @@
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.logo-slider {
+    width: 60vw;
+    overflow: hidden; /* Remove or comment this line to see how the effect works */
+    background-color: gray;
+    height: 140px; 
+    border-radius: 5px;
+    padding: 4px;
+}
+
+.logo-track {
+    display: flex;
+    width: fit-content;
+    height: 100%;
+    animation: scroll 20s linear infinite;
+}
+
+.logo-slide {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.logo {
+    height: 80%; 
+    width: auto;
+    margin-right: 2vw;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.logo-track:hover {
+    animation-play-state: paused;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .logo-slider {
+        width: 90vw;
+        height: 140px;
+    }
+
+    .logo {
+        margin-right: 1.5vw;
+    }
+}
+
+/* Media query for very small screens */
+@media (max-width: 480px) {
+    .logo-slider {
+        width: 95vw;
+        height: 140px; /* Adjusted fixed height for mobile */
+    }
+
+    .logo {
+        margin-right: 1vw;
+    }
+}

@@ -1,0 +1,38 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="crackFilter">
+      <feGaussianBlur stdDeviation="0.3" result="blur"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0"/>
+    </filter>
+    <radialGradient id="crackGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:rgba(255,255,255,0.9);stop-opacity:1" />
+      <stop offset="70%" style="stop-color:rgba(255,255,255,0.6);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgba(255,255,255,0.2);stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Main radial cracks from center point (100,100) -->
+  <path d="M100,100 L120,80 L140,60 L160,40" stroke="url(#crackGradient)" stroke-width="2" fill="none" filter="url(#crackFilter)"/>
+  <path d="M100,100 L120,100 L140,100 L160,100" stroke="url(#crackGradient)" stroke-width="2" fill="none" filter="url(#crackFilter)"/>
+  <path d="M100,100 L120,120 L140,140 L160,160" stroke="url(#crackGradient)" stroke-width="2" fill="none" filter="url(#crackFilter)"/>
+  <path d="M100,100 L100,120 L100,140 L100,160" stroke="url(#crackGradient)" stroke-width="2" fill="none" filter="url(#crackFilter)"/>
+  <path d="M100,100 L80,80 L60,60 L40,40" stroke="url(#crackGradient)" stroke-width="2" fill="none" filter="url(#crackFilter)"/>
+  <path d="M100,100 L80,100 L60,100 L40,100" stroke="url(#crackGradient)" stroke-width="2" fill="none" filter="url(#crackFilter)"/>
+  <path d="M100,100 L80,120 L60,140 L40,160" stroke="url(#crackGradient)" stroke-width="2" fill="none" filter="url(#crackFilter)"/>
+  <path d="M100,100 L100,80 L100,60 L100,40" stroke="url(#crackGradient)" stroke-width="2" fill="none" filter="url(#crackFilter)"/>
+  
+  <!-- Diagonal cracks -->
+  <path d="M100,100 L130,70 L160,40" stroke="url(#crackGradient)" stroke-width="1.5" fill="none" filter="url(#crackFilter)"/>
+  <path d="M100,100 L130,130 L160,160" stroke="url(#crackGradient)" stroke-width="1.5" fill="none" filter="url(#crackFilter)"/>
+  <path d="M100,100 L70,70 L40,40" stroke="url(#crackGradient)" stroke-width="1.5" fill="none" filter="url(#crackFilter)"/>
+  <path d="M100,100 L70,130 L40,160" stroke="url(#crackGradient)" stroke-width="1.5" fill="none" filter="url(#crackFilter)"/>
+  
+  <!-- Secondary cracks branching from main ones -->
+  <path d="M120,80 L110,70 L100,60" stroke="url(#crackGradient)" stroke-width="1" fill="none" filter="url(#crackFilter)"/>
+  <path d="M120,120 L110,130 L100,140" stroke="url(#crackGradient)" stroke-width="1" fill="none" filter="url(#crackFilter)"/>
+  <path d="M80,80 L90,70 L100,60" stroke="url(#crackGradient)" stroke-width="1" fill="none" filter="url(#crackFilter)"/>
+  <path d="M80,120 L90,130 L100,140" stroke="url(#crackGradient)" stroke-width="1" fill="none" filter="url(#crackFilter)"/>
+  
+  <!-- Impact point (center) -->
+  <circle cx="100" cy="100" r="3" fill="rgba(255,255,255,0.8)" filter="url(#crackFilter)"/>
+</svg>

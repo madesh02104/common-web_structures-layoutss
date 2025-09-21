@@ -64,7 +64,7 @@ body {
 @media (max-width: 480px) {
     .logo-slider {
         width: 95vw;
-        height: 140px; /* Adjusted fixed height for mobile */
+        height: 140px; 
     }
 
     .logo {
